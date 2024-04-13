@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Profile</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    <h1 style="color: blueviolet;">Welcome to my Profile</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoFoodie</title>
+    <style>
+        /* Styles for footer */
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+        }
+        .footer-container span,
+        .footer-container a {
+            margin: 0 10px;
+        }
+        .footer-container a {
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-container span {
+                margin-bottom: 10px;
+            }
+        }
+        /* Styles for body, header, nav, and container */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background: #e37474;
+            padding: 0.5em;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            margin: 1em;
+        }
+    </style>
 
-    </body>
+</head>
+<body style="background-color: yellowgreen;">
+    <header>
+        <h1>RestoFoodie</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <input type="search" id="searchBar" placeholder="Find your meal...">
+            <button onclick="search()">Search</button>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Welcome to FoodiePal</h2>
+            <p>Want to order something? Search what's on your mind.</p>
+        </div>
+    
+    </main>
+    <footer>
+        <div class="footer-container" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; text-align: center;">
+            <div class="footer-section" style="flex: 1; min-width: 200px;">
+                <p>Contact Us: city, state, country | Phone: +91-123456789 | Email: info@foodiepal.com</p>
+            </div>
+            <div class="footer-section" style="flex: 1; min-width: 200px;">
+                <p>Follow Us: 
+                    <a href="https://www.facebook.com/restofoodie" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/restofoodie" target="_blank">Instagram</a>
+                </p>
+            </div>
+            <div class="footer-section" style="flex: 1; min-width: 200px;">
+                <p>Quick Links: 
+                    <a href="#menus">Menus</a> |
+                    <a href="#our-story">Our Story</a> |
+                    <a href="#happenings">Happenings</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
 </html>
